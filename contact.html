@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <link rel="icon" type="image/x-icon" href="assets/website-icon.png">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="icon" type="image/x-icon" href="assets/website-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/foot2.css">
+    <link rel="stylesheet" href="Materialstyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A500"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      .page-container {
+            max-width: 100%;
+            padding: 20px; /* Add spacing at the top */
+            box-sizing: border-box; /* Ensure padding is included in the width */
+        }
+
+        /* Style the header and navigation bar */
+        .navbar {
+            background-color:blue;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar-links ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .map {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            padding: 20px 0; /* Add spacing at the top and bottom */
+        }
+
+        .form-and-map-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line when necessary */
+            justify-content: space-between; /* Add spacing between form and map */
+            width: 100%;
+        }
+
+        .formContainer {
+            flex: 1; /* Allow the form to grow and shrink as needed */
+            padding: 10px;
+            box-sizing: border-box; /* Ensure padding is included in the width */
+            width: 48%; /* Reduce the form width */
+        }
+
+        input,
+        textarea {
+            height: 35px;
+            border: 1px solid #a3a3a3;
+            padding: 5px;
+            width: 100%;
+        }
+
+        form {
+            flex: 1; /* Allow the form to grow and shrink as needed */
+            padding: 10px;
+            box-sizing: border-box; /* Ensure padding is included in the width */
+            width: 48%; /* Reduce the form width */
+        }
+
+        .mapn {
+            width: 48%; /* Reduce the map width */
+            height: 400px;
+            padding-top: 10px; /* Reduce the top padding */
+        }
+
+        #textarea {
+            height: 10rem;
+        }
+
+        .glow {
+            margin-top: 10px; /* Adjust the value as needed */
+        }
+        .fa {
+    color: #000; /* Change to the desired color */
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">ALO EDUCATIONAL HUB</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="/edu/admin/Course.php">Courses</a></li>
+            <li><a href="Quizomania/index.php" target="_blank">Online Quiz</a></li>
+            <li><a href="index3.php">Study Material</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="logout-user.php">Logout</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="map">
+            <div class="form-and-map-container">
+                <form id="contactForm" action="send_email.php" method="post">
+                    <div class="formContainer">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" required />
+                    </div>
+                    <div class="formContainer">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" />
+                    </div>
+                    <div class="formContainer">
+                        <label for="mail">Mail Address</label>
+                        <input type="email" name="mail" required />
+                    </div>
+                    <div class="formContainer">
+                        <label for="message">Leave a message for us</label>
+                        <textarea name="message" id="textarea" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="glow" name="submit"><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        SUBMIT</button>
+                </form>
+                <div class="mapn">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63188.98981047489!2d77.3738323743052!3d8.171303015969324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04f0dfc0ddc7b7%3A0x809a9e32a95d3ed1!2sNagercoil%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1694875132124!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- <div class="media">
+      <div class="social">
+          <p>FOLLOW OUR SOCIAL</p>
+          <div  class="icons">
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+      </div>
+      </div>
+      <div class="Come">
+          <p>COME VISIT US</p><br>
+          <p id="comewith">
+              Chettikulam Junction, Hindu <br>
+              College Road,Chetti Kulam, <br>
+              Chenthooran Nagar, <br>
+              Nagercoil-1           </p>
+      </div>
+      <div class="connect">
+          <p>CONNECT WITH US</p><br>
+          <i class="fa-light fa-phone">+(91) 739-585-0903</i><br>
+          <i class='fa fa-envelope'>&nbsp;&nbsp;&nbsp;contact@alogroups.com</i>
+      </div>
+  </div> -->
+      
+
+  <div class="footer">
+    <div class="footer-content">
+        <p>Upskill for a better future</p>
+        <p><b>Request more Information</b></p>
+        <ul class="footer-nav">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="admin/Course.php">Courses</a></li>
+            <li><a href="Quizomania/index.php" target="_blank">Online Quiz</a></li>
+            <li><a href="index3.html">Study Material</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Conatct Us</a></li>
+            
+        </ul>
+        <div class="social-links">
+            <!-- <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a> -->
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus"></i></a>
+              <a href="#"><i class="fas fa-phone"></i></a>
+        </div>
+    </div>
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+</div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="scriptnav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="scriptnav.js"></script>
+
+  </body>
+  </html>
+
+  
